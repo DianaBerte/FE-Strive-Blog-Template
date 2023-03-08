@@ -9,8 +9,8 @@ const BlogList = (props) => {
   const fetchBlogPosts = async () => {
     try {
       const res = await fetch
-      //(process.env.REACT_APP_HOST)
-      ("http://localhost:3001/blogPosts%22");
+      (process.env.REACT_APP_BE_URL)
+      // ("http://localhost:3001/blogPosts%22");
       if (res.ok) {
         const data = await res.json();
         setPosts(data)
